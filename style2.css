@@ -78,7 +78,7 @@ ul.list {
 nav .button-container {
    display: flex;
    align-items: center;
-   gap: 16px;
+   gap: 32px;
 }
 
 #avatar {
@@ -119,9 +119,16 @@ nav .button-container {
 }
 
 .button-secondary {
-   background: transparent;
-   color: white;
+    text-decoration: none  ;
+   background: white;
+   color: blueviolet;
    border: 2px solid white;
+   height: fit-content;
+   border: 2px solid white;
+   border-radius: 8px;
+   padding: 12px 28px;
+   font-weight: 600;
+   font-size: 0.95em;
 }
 
 .button-secondary:hover {
@@ -282,3 +289,118 @@ footer {
 
 
 
+/* Grands écrans (moins de 1400px) */
+@media (max-width: 1400px) {
+   .produits {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+/* Tablettes (moins de 1000px) */
+@media (max-width: 1000px) {
+   nav {
+      padding: 20px 30px;
+   }
+
+   .produits {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+   }
+
+   main {
+      padding: 60px 30px;
+   }
+
+   .titles h1 {
+      font-size: 3.5em;
+   }
+
+   .titles h2 {
+      font-size: 1.2em;
+   }
+}
+
+/* Petites tablettes (moins de 768px) */
+@media (max-width: 768px) {
+   nav {
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 16px 20px;
+   }
+
+   ul.list {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      gap: 16px;
+   }
+
+   .hero {
+      height: 60vh;
+      min-height: 400px;
+   }
+
+   .titles h1 {
+      font-size: 2.5em;
+   }
+
+   .titles h2 {
+      font-size: 1em;
+   }
+
+   main > h1 {
+      font-size: 2.2em;
+   }
+}
+
+
+@media (max-width: 600px) {
+   .produits {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+
+   .hero {
+      height: 50vh;
+      min-height: 350px;
+   }
+
+   .titles h1 {
+      font-size: 2em;
+   }
+
+   .titles h2 {
+      font-size: 0.9em;
+   }
+
+   .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .hero-buttons .button {
+      width: 200px;
+   }
+
+   main {
+      padding: 40px 20px;
+   }
+
+   main > h1 {
+      font-size: 1.8em;
+   }
+
+   nav {
+      padding: 12px 16px;
+   }
+
+   .navig h3 {
+      font-size: 1.2em;
+   }
+
+   ul.list {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+   }
+}
